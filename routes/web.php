@@ -2,8 +2,7 @@
 
 use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DemoController;
-
+use App\Http\Controllers\ExtraController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +24,8 @@ Route::view("/form","form.form")->name('form.get');
 Route::view("/login","form.login");
 
 // Route::post("/handleform",[FormController::class,'handleFormSubmission']);
-Route::post("/handleform",[FormController::class,'handleFormSubmission'])->name('form.post');
+// Route::post("/handleform",[FormController::class,'handleFormSubmission'])->name('form.post');
+Route::post("/handleform", [ExtraController::class, 'checkValidation'])->name("form.post");
+
+
 
