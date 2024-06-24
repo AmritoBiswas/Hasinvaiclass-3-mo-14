@@ -1,5 +1,5 @@
 <x-layout title="Form Page">
-    <h1>This is the Normal from page</h1>
+    <h1>This is the  from page</h1>
     <fieldset>
         <form action={{route('form.post')}} method="POST">
             {{-- @csrf --}}
