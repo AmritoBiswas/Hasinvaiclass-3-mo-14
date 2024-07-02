@@ -8,9 +8,10 @@ class ExtraController extends Controller
 {
     function checkValidation(Request $request){
 
-        $validation = $request ->validate([
-            'name'=>'required',
-            'email'=>'required|email'
+        $request ->validate([
+            'name'=>'required|min:3|max:10|alpha|not_in:admin',
+            'email'=>'required|email',
+            'price' =>'required|numeric|min:3|between:10,100'
         ]);
 
 

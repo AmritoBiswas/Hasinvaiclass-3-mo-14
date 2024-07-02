@@ -7,6 +7,7 @@
             <input type="text" name="name" id="name" placeholder="name">
             <label for="email">Email</label>
             <input type="text" name="email" id="email" placeholder="email">
+            <input type="number" name="price" id="price" placeholder="price">
             <input type="submit" name="submit" id="submit"> 
             
 
