@@ -4,14 +4,14 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class FormRequest extends FormRequest
+class FormVRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,9 @@ class FormRequest extends FormRequest
     {
         return [
             //
+            'name'=>'required|min:3|max:10|alpha|not_in:admin',
+            'email'=>'required|email',
+            'price' =>'required|numeric|min:3|between:10,100'
         ];
     }
 }
