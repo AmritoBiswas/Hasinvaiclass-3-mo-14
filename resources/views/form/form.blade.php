@@ -4,10 +4,10 @@
         <form action="{{route('form.post')}}" method="POST">
             {{-- @csrf --}}
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="name">
+            <input type="text" name="name" id="name" placeholder="name" value='{{old('name')}}'>
             <label for="email">Email</label>
-            <input type="text" name="email" id="email" placeholder="email">
-            <input type="number" name="price" id="price" placeholder="price">
+            <input type="text" name="email" id="email" placeholder="email" value='{{old('email')}}'>
+            <input type="number" name="price" id="price" placeholder="price" value='{{old('price')}}'>
             <input type="submit" name="submit" id="submit"> 
             
 

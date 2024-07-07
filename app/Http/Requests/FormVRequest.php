@@ -28,4 +28,11 @@ class FormVRequest extends FormRequest
             'price' =>'required|numeric|min:3|between:10,100'
         ];
     }
+
+    function messages()
+    {
+        return[
+            'name.required' => "name dite hobe"
+        ];
+    }
 }

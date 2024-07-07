@@ -26,6 +26,9 @@ Route::view("/login","form.login");
 // Route::post("/handleform",[FormController::class,'handleFormSubmission']);
 // Route::post("/handleform",[FormController::class,'handleFormSubmission'])->name('form.post');
 Route::post("/handleform", [ExtraController::class, 'checkValidation'])->name("form.post");
+Route::get('/hello',function(){
+    return "Hello wolrd";
+})->middleware(['throttle:2,1']);
 
 
 
