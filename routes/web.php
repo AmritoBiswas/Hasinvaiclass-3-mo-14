@@ -3,6 +3,9 @@
 use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExtraController;
+use App\Http\Middleware\SecretMiddleware;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +32,10 @@ Route::post("/handleform", [ExtraController::class, 'checkValidation'])->name("f
 Route::get('/hello',function(){
     return "Hello wolrd";
 })->middleware(['throttle:2,1']);
+
+Route::get('/secret',function(){
+    return "Secret messeage";
+})->middleware(SecretMiddleware::class);
 
 
 
